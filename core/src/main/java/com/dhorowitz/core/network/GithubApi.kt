@@ -10,5 +10,9 @@ interface GithubApi {
     @WorkerThread
     @GET("/repos/{org}/{repo}/pulls")
     suspend fun getPRs(@Path("org") org: String,
-                       @Path("org") repo: String): Response<List<PRDto>>
+                       @Path("repo") repo: String): Response<List<PRDto>>
+
+    companion object {
+        const val BASE_URL = "https://api.github.com"
+    }
 }
