@@ -1,6 +1,6 @@
-package com.dhorowitz.core.network
+package com.dhorowitz.keepr.core.network
 
-import com.dhorowitz.core.network.model.PRDto
+import com.dhorowitz.keepr.core.network.model.PRDto
 
 interface GithubRepository {
     suspend fun getPRs(): List<PRDto>
