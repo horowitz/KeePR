@@ -14,7 +14,12 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField "String", "KEEPR_CLIENT_ID", "\"${System.getenv("KEEPR_CLIENT_ID")}\""
+        buildConfigField "String", "KEEPR_CLIENT_SECRET", "\"${System.getenv("KEEPR_CLIENT_SECRET")}\""
+        buildConfigField "String", "KEEPR_REDIRECT_URL", "\"${System.getenv("KEEPR_REDIRECT_URL")}\""
     }
+
     buildTypes {
         release {
             minifyEnabled false
